@@ -5,11 +5,11 @@
 -- If the band has not split, the lifespan is the difference between the current year (2022) and the formed year.
 -- The results are ordered by lifespan in descending order.
 
-SELECT band_name, 
-    CASE 
-        WHEN split IS NULL THEN 2022 - formed
-        ELSE split - formed
-    END AS lifespan
+SELECT band_name,
+CASE
+	WHEN split IS NOT NULL or split != 0 THEN split - formed
+	ELSE 2022 - formed
+END AS lifespan
 FROM metal_bands
-WHERE main_style = 'Glam rock'
+WHERE style LIKE '%Glam rock%'
 ORDER BY lifespan DESC;
