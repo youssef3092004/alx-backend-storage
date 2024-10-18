@@ -5,7 +5,5 @@
 -- - name: A VARCHAR field with a maximum length of 255 characters, which cannot be null.
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    name VARCHAR(255) NOT NULL
-);
-
+	email VARCHAR(255) NOT NULL UNIQUE,
+	name VARCHAR(255));
