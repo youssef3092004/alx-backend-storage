@@ -1,2 +1,2 @@
 // Deletes a document from the 'school' collection in the database.
-db.school.remove(name="Holberton school")
+db.school.remove({name="Holberton school"})
