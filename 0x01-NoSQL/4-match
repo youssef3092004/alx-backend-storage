@@ -1,2 +1,2 @@
 // Query the 'school' collection in the database to find documents where the 'name' field is 'Holberton school'
-db.school.find({'name': 'Holberton school})
+db.school.find({name: 'Holberton school})
