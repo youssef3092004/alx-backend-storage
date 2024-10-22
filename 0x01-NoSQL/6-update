@@ -1,0 +1,2 @@
+// Updates the address of the school named "Holberton school" to '972 Mission street' in the 'school' collection.
+db.school.update([{name="Holberton school"}, {address='972 Mission street'}])
