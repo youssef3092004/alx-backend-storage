@@ -1,1 +1,2 @@
-db.my_db.insertMany
+// Retrieves and pretty prints all documents from the 'school' collection in the MongoDB database.
+db.school.find()
