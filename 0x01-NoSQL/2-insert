@@ -1,0 +1,2 @@
+// Inserts a document with the name 'Holberton school' into the 'my_db' collection in the MongoDB database.
+db.my_db.insertOne({'name': 'Holberton school'})
