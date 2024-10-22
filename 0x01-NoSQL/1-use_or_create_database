@@ -1,1 +1,3 @@
+// This script connects to a MongoDB instance and switches to the database named "my_db".
+// If the database does not exist, it will be created automatically.
 use my_db
