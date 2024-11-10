@@ -26,6 +26,7 @@ def count_calls(method: Callable) -> Callable:
         return method(self, *args, **kwds)
     return wrapper
 
+
 def call_history(method: Callable) -> Callable:
     """
     Prototype: def call_history(method: Callable) -> Callable:
@@ -67,6 +68,7 @@ def replay(func: Callable):
         fin = '{}(*{}) -> {}'.format(
             key_m, k.decode('utf-8'), v.decode('utf-8'))
         print(fin)
+
 
 class Cache():
     """
