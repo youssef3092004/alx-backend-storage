@@ -67,3 +67,16 @@ def replay(func: Callable):
         fin = '{}(*{}) -> {}'.format(
             key_m, k.decode('utf-8'), v.decode('utf-8'))
         print(fin)
+
+class Cache():
+    """
+    Store instance of Redis client as private variable _redis
+    Flush the instance using flushdb
+    """
+    def __init__(self):
+        """
+        Prototype: def __init__(self):
+        Store instance of Redis client as private variable _redis
+        """
+        self._redis = redis.Redis()
+        self._redis.flushdb()
