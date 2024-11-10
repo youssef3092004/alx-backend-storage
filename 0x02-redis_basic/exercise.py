@@ -80,3 +80,13 @@ class Cache():
         """
         self._redis = redis.Redis()
         self._redis.flushdb()
+
+    @call_history
+    @count_calls
+    def store(self, data: Union[str, bytes, int, float]) -> str:
+        """
+        Store history of inputs and outputs for a particular function
+        """
+        gen = str(uuid.uuid4())
+        self._redis.set(gen, data)
+        return gen
